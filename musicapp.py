@@ -109,8 +109,17 @@ with st.container():
 st.divider()
 if lang and singer and st.session_state["run"] != "false":
     st.info("🎥 Please look at the camera while we capture your emotion...")
-    webrtc_streamer(key="key", desired_playing_state=True,
-                    video_processor_factory=EmotionProcessor)
+    webrtc_streamer(
+        key="key",
+        desired_playing_state=True,
+        video_processor_factory=EmotionProcessor,
+        rtc_configuration={
+            "iceServers": [
+                {"urls": ["stun:stun.l.google.com:19302"]}
+                # Optionally add TURN server entry here for reliability
+            ]
+        }
+    )
 btn = st.button("🎧 Recommend Me Songs", use_container_width=True)
 
 if btn:
