@@ -31,11 +31,10 @@ It combines **Computer Vision, Deep Learning, and Streamlit** to deliver a fun a
 ### 1️⃣ Clone the repository
    ```bash
    git clone https://github.com/your-username/vibevision.git
-   cd vibevision
    ```
 ### 2️⃣ Install dependencies 
    ```bash
-   pip install -r requirements.txt
+   pip install -r requirements_local.txt
    ```
 
 ### 3️⃣ Run the app
