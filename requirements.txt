@@ -1,6 +1,8 @@
 streamlit
-transformers
-torch
-pandas
-scikit-learn
+streamlit-webrtc
+opencv-python-headless
+av
 numpy
+mediapipe
+tensorflow
+h5py
